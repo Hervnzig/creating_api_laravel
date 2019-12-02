@@ -20,6 +20,10 @@ class Home2Controller extends Controller
 
         // echo $request->get('name', 'Not provided');
 
-        return '<form method="post"><input type="text" name = "name"> <input type="submit"></form>';
+        return '<form method="post" action = "'.route('contact').'"><input type="text" name = "name"> <input type="submit"></form>';
+    }
+
+    public function store (Request $request){
+        return ($request->name);
     }
 }

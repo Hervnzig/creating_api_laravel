@@ -92,5 +92,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/home', 'Home2Controller@index');
 
 
-Route::get('/contact', 'Home2Controller@index');
+// Route::get('/contact', 'Home2Controller@index');
 // Route::post();
+
+
+Route::get('/contact', 'Home2Controller@index');
+Route::post('/contact', 'Home2Controller@store')->name('contact');
+
+
+Route::get('/', function(){
+    return view('home.index');
+});
