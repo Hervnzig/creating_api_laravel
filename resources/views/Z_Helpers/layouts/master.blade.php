@@ -8,8 +8,12 @@
     @yield('styles')
 </head>
 <body>
-    <nav>Nav</nav>
+@include('layouts.nav')
+<hr>
+    <div class="container">
         @yield('content')
+        <input type = "submit" class="btn btn-success">
+    </div>
     <footer>Footer</footer>
 
     @yield('script')

@@ -8,19 +8,21 @@ class Home2Controller extends Controller
 {
     //
     public function index(Request $request){
-        // return $_GET['name'];
-        // dd (die & dump)
+        // $user = "herve Musangwa";
+        // return view('home.index', ['user' => $user]);
 
-        // dd($request->all());
-        // dd($request);
-        // return $request->pass;
+        /* // simmirarilly this also works
+        $user = "herve Musangwa";
+        return view('home.index')->with('user', $user);
+        */
 
-        // echo $request->pass;
-        // echo $request->email;
+        $data = [
+            'Herve',
+            'Musangwa',
+            'Altimer'
+        ];
 
-        // echo $request->get('name', 'Not provided');
-
-        return '<form method="post" action = "'.route('contact').'"><input type="text" name = "name"> <input type="submit"></form>';
+        return view('home.index', compact('data'));
     }
 
     public function store (Request $request){

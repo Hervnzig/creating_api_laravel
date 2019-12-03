@@ -96,10 +96,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::post();
 
 
-Route::get('/contact', 'Home2Controller@index');
-Route::post('/contact', 'Home2Controller@store')->name('contact');
+// Route::get('/contact', 'Home2Controller@index');
+// Route::post('/contact', 'Home2Controller@store')->name('contact');
 
 
-Route::get('/', function(){
-    return view('home.index');
-});
+// Route::get('/', function(){
+//     return view('home.index');
+// });
+
+// Route::get('/', 'Home2Controller@index');
+
+Route::get('/', 'ContactController@index');
+Route::post('/data', 'ContactController@store')->name('contact.store');
+
+Route::get('/mail', 'MailController@index');
+Route::post('/mail', 'MailController@store')->name('mail.store');
