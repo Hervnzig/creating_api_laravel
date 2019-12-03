@@ -111,3 +111,10 @@ Route::post('/data', 'ContactController@store')->name('contact.store');
 
 Route::get('/mail', 'MailController@index');
 Route::post('/mail', 'MailController@store')->name('mail.store');
+
+Route::get('/login', 'LoginController@index');
+Route::post('/login', 'LoginController@store')->name('user.login');
+
+Route::get('/success', function (){
+    echo "<strong>Successfull!!!</strong>";
+})->name('success');
