@@ -118,3 +118,5 @@ Route::post('/login', 'LoginController@store')->name('user.login');
 Route::get('/success', function (){
     echo "<strong>Successfull!!!</strong>";
 })->name('success');
+
+Route::get('/send', 'Mail2Controller@index');
